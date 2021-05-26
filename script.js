@@ -1,0 +1,1 @@
+var eatIn = "#eat-in";
