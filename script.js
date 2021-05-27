@@ -5,7 +5,7 @@ var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1"
 // fetch(apiUrl);
 // greated get recipes function 
 var getRecipes = function() {
-    fetch('https://api.spoonacular.com/recipes/complexSearch?key${apiKey}');
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?key=${apiKey}`);
     
     console.log("function was called");
 };
