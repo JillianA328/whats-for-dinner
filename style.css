@@ -11,21 +11,42 @@
     color:rgb(30,94,39);
 }
 
+.hero-image {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 25%;
+}
+
+.hero-body {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
 .images:hover {
     filter: blur(2px);
 }
 
-.images {
-    max-width: none;
+.column {
+    justify-content: center;
+    margin: 100px;
+    padding: 100px;
+
 }
 
-.container {
-    margin: 15px;
+.images {
+    
 }
 
 .bio {
-    margin: 50px;
-    font-size: 1.5rem;
+    margin: 60px;
+    font-size: 1.3rem;
     color:rgb(30,94,39);
 }
 
