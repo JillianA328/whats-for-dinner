@@ -1,0 +1,33 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(251,240,207);
+    color:rgb(30,94,39);
+}
+  
+
+.hero .header {
+    font-size: 50px;;
+    font-weight: 900;
+    color:rgb(30,94,39);
+}
+
+.images:hover {
+    filter: blur(2px);
+}
+
+.images {
+    max-width: none;
+}
+
+.container {
+    margin: 15px;
+}
+
+.bio {
+    margin: 50px;
+    font-size: 1.5rem;
+    color:rgb(30,94,39);
+}
+
+
+
