@@ -1,7 +1,7 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
-
+// https://api.spoonacular.com/recipes/visualizeRecipe
 // fetch(apiUrl);
 // greated get recipes function 
 var getRecipes = function(event) {
@@ -10,14 +10,15 @@ var getRecipes = function(event) {
     var userInput = document.querySelectorAll(".ingredients");
     console.log(userInput)
     var search =""
-    for (let i = 0; i < userInput.length; i++ ){
+    for (let i = 0; i < userInput.length; i++ ) {
         if (userInput[i].checked){
             console.log(userInput[i].name)
             search += `,+${userInput[i].name}`
         }
     }
     console.log(search)
-    
+    // create variable to select IDs from HTML
+    // fetch API https://api.spoonacular.com/recipes/{id}/information and include variable that selects IDs in place of ID
     var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
     // fetch(`https://api.spoonacular.com/recipes/findByIngredients?key=${apiKey}`);
     // https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true.
