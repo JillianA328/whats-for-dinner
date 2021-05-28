@@ -44,16 +44,18 @@ function displayRecipes(data) {
     for (let i=0; i<data.length; i++) {
         htmlCode += `
         <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
-          <p class="title">Middle tile</p>
-          <p class="subtitle">With an image</p>
+        <article data-id=${data[i].id} class="tile is-child notification is-info">
+          <p class="title">${data[i].title}</p>
+          <p class="subtitle">Likes:${data[i].likes}</p>
           <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png">
+            <img src="${data[i].image}">
           </figure>
         </article>
       </div>
         `
     }
+    console.log(htmlCode)
+    document.getElementById("card").innerHTML = htmlCode
 }
 
 
