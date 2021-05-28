@@ -10,17 +10,29 @@
 
 <body>
     <form id="get-recipes">
-            <input type="checkbox" id="chicken" name="chicken" value="chicken">
+            <input type="checkbox" class="ingredients" id="chicken" name="chicken" value="chicken">
             <label for="chicken"> Chicken</label><br>
-            <input type="checkbox" id="steak" name="steak" value="steak">
+            <input type="checkbox" class="ingredients" id="steak" name="steak" value="steak">
             <label for="steak"> Steak</label><br>
-            <input type="checkbox" id="beef" name="beef" value="beef">
+            <input type="checkbox" class="ingredients" id="beef" name="beef" value="beef">
             <label for="beef"> Beef</label><br><br>
-            <input type="checkbox" id="veggie" name="veggie" value="veggie">
+            <input type="checkbox" class="ingredients" id="veggie" name="veggie" value="veggie">
             <label for="veggie"> Veggie</label><br><br>
             <input type="submit" value="Submit">
-          </form>
+            <button id="searchBtn">Search</button>
     </form>
+
+    <main id="card">
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title">Middle tile</p>
+              <p class="subtitle">With an image</p>
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/640x480.png">
+              </figure>
+            </article>
+          </div>
+    </main>
 
 
     <script src="./script.js"></script>
