@@ -40,20 +40,22 @@ var getRecipes = function(event) {
         ingredients = data;
         console.log(ingredients);
 
-        // for (let i=0; i<data.length; i++) {
+        for (let i=0; i<data.length; i++) {
             var id = ingredients[i].id;
         // var id = ingredients.id;
         // console.log(id);
         
         return fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
-           
 
-    .then(function (response) {
+        }
+
+    }).then(function (response) {
         return response.json();
     }).then(function (data) {
         console.log(data);
 
         recipes = data;
+        
 
         // if (response.ok) {
         //      response.json().then(function(data) {
@@ -62,11 +64,10 @@ var getRecipes = function(event) {
         //      })
         //    }
     })
-
-//  }   
+    
     
     console.log("function was called");
-});
+};
 
 document.getElementById("searchBtn").addEventListener("click",getRecipes)
 
@@ -86,10 +87,9 @@ function displayRecipes(data) {
         `
         console.log(data[i]);
     }
-}
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
-
 }
 
 
+// getRecipes();
