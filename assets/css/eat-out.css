@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(251,240,207);
+    --secondary-color: rgb(33, 85, 33);
+    --tertiary-color: #39a6b2;
+}
+
+header h1 {
+    font-size: xx-large;
+    padding: 0px 0px 0px 20px;
+}
+
+.columns {
+    display: flex;
+    height: 100vh;
+  }
+
+.navbar-menu, footer.footer, footer strong {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+footer.footer, div.navbar-menu {
+    padding: 10px;
+}
+
+footer.footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.navbar-item.is-expanded {
+    color: var(--primary-color);
+    padding: 0px 40px;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.background-image {
+    background-image: url(../images/eat\ out.jpeg);
+    background-size: cover;
+    
+}
