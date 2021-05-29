@@ -1,5 +1,6 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
+var recipeId = [];
 // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
 // https://api.spoonacular.com/recipes/visualizeRecipe
 // fetch(apiUrl);
@@ -19,7 +20,7 @@ var getRecipes = function(event) {
     console.log(search)
     // create variable to select IDs from HTML
     // fetch API https://api.spoonacular.com/recipes/{id}/information and include variable that selects IDs in place of ID
-    var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
+    // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
     // fetch(`https://api.spoonacular.com/recipes/findByIngredients?key=${apiKey}`);
     // https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true.
     // var apiURL =`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`
@@ -37,37 +38,42 @@ var getRecipes = function(event) {
     }).then(function (data) {
         console.log(data);
 
-        ingredients = data;
-        console.log(ingredients);
+        // ingredients = data;
+        // console.log(ingredients);
 
-        for (let i=0; i<data.length; i++) {
-            var id = ingredients[i].id;
+        for (var i=0; i<data.length; i++) {
+            var id = data[i].id;
         // var id = ingredients.id;
-        // console.log(id);
-        
-        return fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
+         console.log(data[i].id);
+         recipeId.push(id);
+         console.log(recipeId);   
 
         }
+        
+    //     return fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
 
-    }).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        console.log(data);
 
-        recipes = data;
+    // }).then(function (response) {
+    //     return response.json();
+    // }).then(function (data) {
+    //     console.log(data);
+
+    //     recipes = data;
         
 
-        // if (response.ok) {
-        //      response.json().then(function(data) {
-        //         console.log("API",data);
-                 displayRecipes(recipes);
-        //      })
-        //    }
-    })
-    
-    
+    //     // if (response.ok) {
+    //     //      response.json().then(function(data) {
+    //     //         console.log("API",data);
+    //              displayRecipes(recipes);
+    //     //      })
+    //     //    }
+    // })
+  
+
     console.log("function was called");
-};
+});
+
+
 
 document.getElementById("searchBtn").addEventListener("click",getRecipes)
 
@@ -90,6 +96,3 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 }
-
-
-// getRecipes();
