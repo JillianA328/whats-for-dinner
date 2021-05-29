@@ -16,8 +16,9 @@ var getRecipes = function(event) {
             console.log(userInput[i].name)
             search += `,+${userInput[i].name}`
         }
+        console.log(search)
     }
-    console.log(search)
+    
     // create variable to select IDs from HTML
     // fetch API https://api.spoonacular.com/recipes/{id}/information and include variable that selects IDs in place of ID
     // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
@@ -73,7 +74,7 @@ var getRecipes = function(event) {
     console.log("function was called");
 });
 
-
+}
 
 document.getElementById("searchBtn").addEventListener("click",getRecipes)
 
