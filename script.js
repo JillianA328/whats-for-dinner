@@ -118,6 +118,8 @@ function website() {
 
             window.location = "data.sourceUrl"
 
+            //want to add modal upon "view recipe" button click
+
         })
     console.log(id)
 }
