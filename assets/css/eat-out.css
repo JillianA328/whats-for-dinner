@@ -8,6 +8,7 @@
     --primary-color: rgb(251,240,207);
     --secondary-color: rgb(33, 85, 33);
     --tertiary-color: #fbff00;
+    --quaternary-color: rgb(155, 9, 9);
 }
 
 header h1 {
@@ -20,8 +21,13 @@ header h1 {
     height: 100vh;
 }
 
-.navbar-menu, footer.footer, footer strong {
+.navbar-menu, footer.footer {
     background-color: var(--secondary-color);
+    background-image: linear-gradient(45deg, var(--quaternary-color) 0%, orange 52%, var(--quaternary-color) 90%);
+    color: var(--primary-color);
+}
+
+footer strong {
     color: var(--primary-color);
 }
 
