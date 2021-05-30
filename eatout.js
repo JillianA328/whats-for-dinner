@@ -37,18 +37,20 @@ function zipApi() {
                     //console.log(restName);
 
                     //card elements
-                    var card = $('<div>').addClass('card column is-4 p-1 m-1 has-background-orange').attr('id', 'restaurantInfo');
+                    var card = $('<div>').addClass('card column is-4 m-1 has-background-orange').attr('id', 'restaurantInfo');
                     var cardBody = $('<div>').addClass('card-content');
-                    var cardTitle = $('<p>').addClass('title is-size-1-mobile has-text-white').text(restName);
-                    var cardSub = $('<p>').addClass('subtitle is-size-3-mobile has-text-white').text(restAddress);
+                    var cardTitle = $('<p>').addClass('title is-size-2-mobile').text(restName);
+                    var cardMap = $('<iframe>').addClass('subtitle').attr('src', `https://www.google.com/maps?q=${restAddress}&output=embed`);
+                    //var cardSub = $('<p>').addClass('subtitle is-size-4-mobile').text(restAddress);
                     var cardFooter = $('<footer>').addClass('card-footer');
                     var cardNum = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `tel:${restPhone}`).text(`${restPhone}`);
-                    var cardUrl = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `https://${restName}.com`).html(`Website`);
+                    var cardUrl = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `${restWebsite}`).html(`Website`);
+                    $("a").attr("target","_blank");
 
                     //add info to card
 
                     cardFooter.append(cardNum, cardUrl);
-                    cardBody.append(cardTitle, cardSub, cardFooter);
+                    cardBody.append(cardTitle, cardMap, cardFooter);
                     card.append(cardBody);
                     $("#displayRest").append(card);
                 });
