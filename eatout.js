@@ -35,14 +35,16 @@ function zipApi() {
 
                     //console.log(restName);
 
-                    var card = $('<div>').addClass('card').attr('id', 'restaurantInfo');
+                    var card = $('<div>').addClass('card column is-4').attr('id', 'restaurantInfo');
                     var cardBody = $('<div>').addClass('card-content');
                     var cardTitle = $('<p>').addClass('title').text(restName);
                     var cardSub = $('<p>').addClass('subtitle').text(restAddress);
-                    var cardInfo = $('<p>').addClass('content').text(`Phone Number: ${restPhone}`);
-                    var cardUrl = $('<p>').addClass('content').html(`Website: <a href="${restWebsite}" target="_blank">${restWebsite}</a>`);
+                    var cardFooter = $('<footer>').addClass('card-footer')
+                    var cardInfo = $('<button>').addClass('card-footer-item').html(`Phone Number <a href="${restPhone}" </a>`);
+                    var cardUrl = $('<button>').addClass('card-footer-item').html(`Website <a href="${restWebsite}" target="_blank"></a>`);
 
-                    cardBody.append(cardTitle, cardSub, cardInfo, cardUrl);
+                    cardFooter.append(cardInfo, cardUrl);
+                    cardBody.append(cardTitle, cardSub, cardFooter);
                     card.append(cardBody);
                     $("#displayRest").append(card);
                 });
@@ -54,16 +56,3 @@ function zipApi() {
 };
 
 zipApi();
-
-
-//would like to use geolocation 
-
-//create cards in using html/bulma to show info
-//name
-//phone number
-//address
-//website link if there
-//price rating if there
-//can we get distance away?
-
-//link cuisine drop down?
