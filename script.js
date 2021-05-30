@@ -104,6 +104,23 @@ function displayRecipes(data) {
     document.getElementById("card").innerHTML = htmlCode
 
     document.querySelector(".data-url").addEventListener("click", website)
+    // let modalBtn = document.getElementById("modal-btn")
+    // let modal = document.querySelector(".modal")
+    // let closeBtn = document.querySelector(".close-btn")
+
+    // modalBtn.onclick = function () {
+    //     modal.getElementsByClassName.display = "block"
+    // }
+    // closeBtn.onclick = function() {
+    //     modal.style.display = "none"
+    // }
+    // window.onclick = function(e) {
+    //     if(e.target == modal) {
+    //         modal.style.display = "none"
+    //     }
+    
+    // }
+    
 }
 
 
@@ -121,6 +138,24 @@ function website() {
             window.location = "data.sourceUrl"
 
             //want to add modal upon "view recipe" button click
+
+            let modalBtn = document.getElementById("modal-btn")
+    let modal = document.querySelector(".modal")
+    let closeBtn = document.querySelector(".close-btn")
+
+    modalBtn.onclick = function () {
+        modal.getElementsByClassName.display = "block"
+    }
+    closeBtn.onclick = function() {
+        modal.style.display = "none"
+    }
+    window.onclick = function(e) {
+        if(e.target == modal) {
+            modal.style.display = "none"
+        }
+    
+    }
+    
 
         })
     console.log(id)
