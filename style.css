@@ -2,6 +2,7 @@
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(251,240,207);
     color:rgb(30,94,39);
+    
 }
   
 .hero .header {
@@ -16,7 +17,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    
 }
 
 .hero-body {
@@ -36,15 +36,17 @@
     margin-left: 27%;
 }
 
-
-
-
 .images {
     border: 1px solid black;  
 }
 
+.title {
+    color:rgb(30,94,39);
+}
+
 .bio {
-    margin: 60px;
+    margin: 50px;
+    
     font-size: 1.3rem;
     color:rgb(30,94,39);
 }
