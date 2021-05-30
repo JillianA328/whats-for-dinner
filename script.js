@@ -103,7 +103,7 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
-    document.querySelector(".data-url").addEventListener("click", website)
+    document.getElementById("modal-btn").addEventListener("click", website)
     // let modalBtn = document.getElementById("modal-btn")
     // let modal = document.querySelector(".modal")
     // let closeBtn = document.querySelector(".close-btn")
