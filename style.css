@@ -4,20 +4,19 @@
     color:rgb(30,94,39);
 }
   
-
 .hero .header {
-    font-size: 50px;;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: bolder;
     color:rgb(30,94,39);
 }
 
 .hero-image {
-    height: 50%;
+    height: 20%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 25%;
+    
 }
 
 .hero-body {
@@ -25,28 +24,32 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-55%, -55%);
     color: white;
 }
 
 .images:hover {
-    filter: blur(2px);
+    filter: blur(2px);  
 }
 
-.column {
-    justify-content: center;
-    margin: 100px;
-    padding: 100px;
-
+.eat-in-column {
+    margin-left: 27%;
 }
+
+
+
 
 .images {
-    
+    border: 1px solid black;  
 }
 
 .bio {
     margin: 60px;
     font-size: 1.3rem;
+    color:rgb(30,94,39);
+}
+
+.footer {
     color:rgb(30,94,39);
 }
 
