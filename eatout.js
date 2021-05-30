@@ -28,6 +28,7 @@ function zipApi() {
                     // console.log(restaurant.restaurant_phone);
                     // console.log(restaurant.restaurant_website);
 
+                    //variables to name data.map()
                     restName = restaurant.restaurant_name;
                     restAddress = restaurant.address.formatted;
                     restPhone = restaurant.restaurant_phone;
@@ -35,15 +36,18 @@ function zipApi() {
 
                     //console.log(restName);
 
-                    var card = $('<div>').addClass('card column is-4').attr('id', 'restaurantInfo');
+                    //card elements
+                    var card = $('<div>').addClass('card column is-4 p-1 m-1').attr('id', 'restaurantInfo');
                     var cardBody = $('<div>').addClass('card-content');
                     var cardTitle = $('<p>').addClass('title').text(restName);
                     var cardSub = $('<p>').addClass('subtitle').text(restAddress);
-                    var cardFooter = $('<footer>').addClass('card-footer')
-                    var cardInfo = $('<button>').addClass('card-footer-item').html(`Phone Number <a href="${restPhone}" </a>`);
-                    var cardUrl = $('<button>').addClass('card-footer-item').html(`Website <a href="${restWebsite}" target="_blank"></a>`);
+                    var cardFooter = $('<footer>').addClass('card-footer');
+                    var cardNum = $('<a>').addClass('card-footer-item').attr('href', `tel:${restPhone}`).text(`${restPhone}`);
+                    var cardUrl = $('<span>').addClass('card-footer-item').html(`Website <a href="${restWebsite}" target="_blank"></a>`);
 
-                    cardFooter.append(cardInfo, cardUrl);
+                    //add info to card
+
+                    cardFooter.append(cardNum, cardUrl);
                     cardBody.append(cardTitle, cardSub, cardFooter);
                     card.append(cardBody);
                     $("#displayRest").append(card);
@@ -56,3 +60,9 @@ function zipApi() {
 };
 
 zipApi();
+
+function callRest(){
+    $('#phoneNumber').on("clicK", function(){
+        
+    })
+}
