@@ -91,13 +91,15 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-          <button onClick ="website()" class="data-url" data-id=${data[i].id}>View Recipie
-          </button>
+        <button id="modal-btn">View Recipe</button>
         </article>
       </div>
         `
 
     }
+
+    // <button class="data-url" data-id=${data[i].id}>View Recipie
+    //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
