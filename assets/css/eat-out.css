@@ -16,9 +16,15 @@ header h1 {
     padding: 0px 0px 0px 20px;
 }
 
-.columns {
-    display: flex;
+.columns.is-mobile.has-text-centered {
     height: 100vh;
+}
+
+.navbar-menu {
+    position: fixed; 
+    top: 0;
+    left:0;
+    right:0;
 }
 
 .navbar-menu, footer.footer {
@@ -36,7 +42,6 @@ footer.footer, div.navbar-menu, .div.title {
 }
 
 footer.footer {
-    position: fixed;
     bottom:0;
     left:0;
     right:0;
@@ -45,6 +50,13 @@ footer.footer {
 .navbar-item.is-expanded {
     color: var(--primary-color);
     padding: 0px 40px;
+}
+
+.navbar-item.is-expanded:hover {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: none;
+    color: var(--quaternary-color);
 }
 
 body {
@@ -75,11 +87,19 @@ div.column {
     padding-bottom: 20px;
 }
 
-#search-btn {
-    padding: 10px 55px;
-    margin: 20px;
+#search-btn, #clear-btn, input {
+    padding: 10px 40px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
 }
 
-#cuisine {
-    padding: 10px 42px;
+input {
+    padding: 10px 58px;
+    background-color: white;
 }
+
+/* #cuisine {
+    padding: 10px 42px;
+} */
