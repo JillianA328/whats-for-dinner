@@ -30,7 +30,7 @@ var getRecipes = function (event) {
     // var apiURL = `https://api.spoonacular.com/recipes/665734/information?apiKey=${apiKey}`
     // console.log(apiURL)
 
-    var ingredients, recipes;
+    // var ingredients, recipes;
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`)
         .then(function (response) {
 
@@ -91,7 +91,7 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-          <button type="button" onClick="website()" target_blank>View Recipe</button>
+          <a>View Recipe<a>
         </article>
       </div>
         `
