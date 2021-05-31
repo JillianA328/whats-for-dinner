@@ -91,11 +91,11 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-          <button type="button" onclick="website()" target_blank>View Recipe</button>
+          <button type="button" onClick="website()" target_blank>View Recipe</button>
         </article>
       </div>
         `
-
+        
     }
 
     // <button class="data-url" data-id=${data[i].id}>View Recipie
@@ -125,7 +125,7 @@ function displayRecipes(data) {
 
 
 function website() {
-    var id = this.getAttribute("data-id")
+    // var id = this.getAttribute(".button")
    
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
         .then(function (response) {
