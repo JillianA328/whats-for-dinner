@@ -91,7 +91,7 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-        <button id="modal-btn">View Recipe</button>
+          <button type="button" onclick="website()" target_blank>View Recipe</button>
         </article>
       </div>
         `
@@ -103,7 +103,7 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
-    document.getElementById(".button").addEventListener("click", website)
+    document.querySelector("button").addEventListener("click", website)
     // let modalBtn = document.getElementById("modal-btn")
     // let modal = document.querySelector(".modal")
     // let closeBtn = document.querySelector(".close-btn")
@@ -136,6 +136,8 @@ function website() {
             recipes = data;
 
             window.location = "data.sourceUrl"
+
+            $(".button").attr("target","_blank");
 
             //want to add modal upon "view recipe" button click
 
