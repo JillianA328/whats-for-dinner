@@ -139,22 +139,22 @@ function website() {
 
             //want to add modal upon "view recipe" button click
 
-            let modalBtn = document.getElementById("modal-btn")
-    let modal = document.querySelector(".modal")
-    let closeBtn = document.querySelector(".close-btn")
+    //         let modalBtn = document.getElementById("modal-btn")
+    // let modal = document.querySelector(".modal")
+    // let closeBtn = document.querySelector(".close-btn")
 
-    modalBtn.onclick = function () {
-        modal.getElementsByClassName.display = "block"
-    }
-    closeBtn.onclick = function() {
-        modal.style.display = "none"
-    }
-    window.onclick = function(e) {
-        if(e.target == modal) {
-            modal.style.display = "none"
-        }
+    // modalBtn.onclick = function () {
+    //     modal.getElementsByClassName.display = "block"
+    // }
+    // closeBtn.onclick = function() {
+    //     modal.style.display = "none"
+    // }
+    // window.onclick = function(e) {
+    //     if(e.target == modal) {
+    //         modal.style.display = "none"
+    //     }
     
-    }
+    // }
     
 
         })
