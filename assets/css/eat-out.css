@@ -63,23 +63,35 @@ body {
     background-color: var(--primary-color);
 }
 
+.hero {
+    background-image: url(../images/about-us.jpg);
+    padding: 50px;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
 .background-image {
     background-image: url(../images/eat\ out.jpeg);
     background-size: cover;
     
 }
 
-.title {
-    padding-top: 50px;
+div.title {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }
 
 div.title, div.subtitle, label {
     color: var(--tertiary-color);
     font-weight: bolder;
+    background-color: var(--primary-color);
 }
 
 div.subtitle {
     padding-bottom: 40px;
+    padding-top: 10px;
 }
 
 div.column {
