@@ -2,13 +2,21 @@
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(251,240,207);
     color:rgb(30,94,39);
-    
 }
+
+
   
 .hero .header {
     font-size: 50px;
     font-weight: bolder;
     color:rgb(30,94,39);
+    
+}
+
+
+.hero-body {
+    box-shadow:10px 10px 10px grey;
+    border-radius: 25px;;
 }
 
 .hero-image {
@@ -17,6 +25,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
 }
 
 .hero-body {
@@ -26,6 +35,7 @@
     left: 50%;
     transform: translate(-55%, -55%);
     color: white;
+    
 }
 
 .images:hover {
@@ -37,7 +47,9 @@
 }
 
 .images {
-    border: 1px solid black;  
+    border: 1px solid black; 
+    border-radius: 300px;
+    box-shadow:5px 5px 5px #999;
 }
 
 .title {
