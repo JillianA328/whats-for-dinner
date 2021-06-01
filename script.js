@@ -42,6 +42,7 @@ var getRecipes = function (event) {
                 response.json().then(function (data) {
                     console.log("API", data);
                     displayRecipes(data);
+                    // website(data);
                 })
             }
             // ingredients = data;
@@ -79,7 +80,9 @@ var getRecipes = function (event) {
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
 
 function displayRecipes(data) {
+    var id = data.id;
     var htmlCode = "";
+    // website();
     for (let i = 0; i < data.length; i++) {
         htmlCode += `
         <div class="tile is-parent">
@@ -91,7 +94,7 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-          <a>View Recipe<a>
+          <a href='javascript:website()'>View Recipe<a>
         </article>
       </div>
         `
@@ -103,7 +106,7 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
-    document.querySelector("button").addEventListener("click", website)
+    document.querySelector("a").addEventListener("click", website)
     // let modalBtn = document.getElementById("modal-btn")
     // let modal = document.querySelector(".modal")
     // let closeBtn = document.querySelector(".close-btn")
@@ -120,12 +123,13 @@ function displayRecipes(data) {
     //     }
     
     // }
-    
+    // website();
 }
 
 
 function website() {
-    // var id = this.getAttribute(".button")
+    // var id = data.id
+    // believe id variable needs altering
    
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
         .then(function (response) {
@@ -137,7 +141,7 @@ function website() {
 
             window.location = "data.sourceUrl"
 
-            $(".button").attr("target","_blank");
+            $("a").attr("target","_blank");
 
             //want to add modal upon "view recipe" button click
 
@@ -160,5 +164,9 @@ function website() {
     
 
         })
-    console.log(id)
+    // console.log(id)
+
+    
 }
+
+// website();
