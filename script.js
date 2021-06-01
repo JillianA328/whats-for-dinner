@@ -1,6 +1,7 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 var recipeId = [];
+var id 
 // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
 // https://api.spoonacular.com/recipes/visualizeRecipe
 // fetch(apiUrl);
@@ -17,6 +18,8 @@ var getRecipes = function (event) {
             search += `,+${userInput[i].name}`
         }
         console.log(search)
+        // website()
+        
     }
 
     // create variable to select IDs from HTML
@@ -43,6 +46,15 @@ var getRecipes = function (event) {
                     console.log("API", data);
                     displayRecipes(data);
                     // website(data);
+                    for (var i=0; i<data.length; i++) {
+                            var id = data[i].id;
+                        //  var id = ingredients.id;
+                          console.log(data[i].id);
+                          recipeId.push(id);
+                    }
+                    console.log(recipeId);   
+                    console.log(id)
+                    website(recipeId)
                 })
             }
             // ingredients = data;
@@ -106,7 +118,7 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
-    document.querySelector("a").addEventListener("click", website)
+    // document.querySelector("a").addEventListener("click", data[i].sourceUrl)
     // let modalBtn = document.getElementById("modal-btn")
     // let modal = document.querySelector(".modal")
     // let closeBtn = document.querySelector(".close-btn")
@@ -127,9 +139,10 @@ function displayRecipes(data) {
 }
 
 
-function website() {
-    // var id = data.id
+function website(id) {
+    //  var id = data.id
     // believe id variable needs altering
+    console.log(id);
    
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
         .then(function (response) {
@@ -138,10 +151,12 @@ function website() {
             console.log(data);
 
             recipes = data;
+            
+            // document.querySelector("a").addEventListener("click", data.sourceUrl)
+            console.log(data.sourceUrl)
+            // window.location = "data.sourceUrl"
 
-            window.location = "data.sourceUrl"
-
-            $("a").attr("target","_blank");
+            // $("a").attr("target","_blank");
 
             //want to add modal upon "view recipe" button click
 
