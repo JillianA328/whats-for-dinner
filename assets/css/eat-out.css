@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(251,240,207);
+    --secondary-color: rgb(33, 85, 33);
+    --tertiary-color: #fbff00;
+    --quaternary-color: rgb(155, 9, 9);
+}
+
+header h1 {
+    font-size: xx-large;
+    padding: 0px 0px 0px 20px;
+}
+
+.columns.is-mobile.has-text-centered {
+    height: 100vh;
+}
+
+.navbar-menu {
+    position: fixed; 
+    top: 0;
+    left:0;
+    right:0;
+}
+
+.navbar-menu, footer.footer {
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(45deg, var(--quaternary-color) 0%, orange 52%, var(--quaternary-color) 90%);
+    color: var(--primary-color);
+}
+
+footer strong {
+    color: var(--primary-color);
+}
+
+footer.footer, div.navbar-menu, .div.title {
+    padding: 10px;
+}
+
+footer.footer {
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.navbar-item.is-expanded {
+    color: var(--primary-color);
+    padding: 0px 40px;
+}
+
+.navbar-item.is-expanded:hover {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: none;
+    color: var(--quaternary-color);
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.hero {
+    background-image: url(../images/about-us.jpg);
+    padding: 50px;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+p.about {
+    margin: 20px 50px;
+}
+
+.background-image {
+    background-image: url(../images/eat\ out.jpeg);
+    background-size: cover;
+    
+}
+
+div.title {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+div.title, div.subtitle, label {
+    color: var(--tertiary-color);
+    font-weight: bolder;
+    background-color: var(--primary-color);
+}
+
+div.subtitle {
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+div.column {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+#search-btn, #clear-btn, input {
+    padding: 10px 40px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
+}
+
+input {
+    padding: 10px 58px;
+    background-color: white;
+}
+
+/* #cuisine {
+    padding: 10px 42px;
+} */
