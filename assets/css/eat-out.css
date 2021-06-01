@@ -70,6 +70,10 @@ body {
     font-size: 30px;
 }
 
+p.about {
+    margin: 20px 50px;
+}
+
 .background-image {
     background-image: url(../images/eat\ out.jpeg);
     background-size: cover;
