@@ -118,6 +118,10 @@ div.card-content {
     margin: 25px 5px;
 }
 
+div.form {
+    background-color: var(--primary-color);
+}
+
 div.title {
     padding-top: 40px;
     padding-bottom: 10px;
@@ -126,9 +130,8 @@ div.title {
 }
 
 div.title, div.subtitle, label {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-weight: bolder;
-    background-color: var(--primary-color);
 }
 
 div.subtitle {
@@ -141,12 +144,27 @@ div.column {
     padding-bottom: 20px;
 }
 
+#displayRest {
+    margin: 100px;
+    color: var(--secondary-color);
+}
+
+#zip-code {
+    color: black;
+}
+
 #search-btn, #clear-btn, input {
     padding: 10px 40px;
     margin: 15px;
     border-radius: 10px;
     border: none;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+}
+
+#search-btn:hover, #clear-btn:hover {
     background-color: var(--primary-color);
+    color: var(--quaternary-color);
 }
 
 input {
