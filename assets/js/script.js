@@ -1,7 +1,7 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 var recipeId = [];
-var id 
+// var id 
 // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
 // https://api.spoonacular.com/recipes/visualizeRecipe
 // fetch(apiUrl);
@@ -52,9 +52,9 @@ var getRecipes = function (event) {
                           console.log(data[i].id);
                           recipeId.push(id);
                     }
-                    console.log(recipeId);   
+                    console.log("recipeId", recipeId);   
                     console.log(id)
-                    website(recipeId)
+                    // website(recipeId)
                 })
             }
             // ingredients = data;
@@ -92,10 +92,29 @@ var getRecipes = function (event) {
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
 
 function displayRecipes(data) {
-    var id = data.id;
+    // var id = data.id;
     var htmlCode = "";
     // website();
     for (let i = 0; i < data.length; i++) {
+        console.log("Data", data)
+        var recipe = data[i];
+
+        // const website = (id = recipe.id) => {
+        //     //  var id = data.id
+        //     // believe id variable needs altering
+        //     console.log("website-id",id);
+           
+        //     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
+        //         .then(function (response) {
+        //             return response.json();
+        //         }).then(function (data) {
+        //             console.log(data);
+        //             recipes = data;
+        //             console.log(data.sourceUrl)
+        //         })        
+        // }
+
+        console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
         <article data-id=${data[i].id} class="tile is-child notification is-info">
@@ -106,7 +125,7 @@ function displayRecipes(data) {
           </figure>
           <div id=${data[i].id}>
           </div>
-          <a href='javascript:website()'>View Recipe<a>
+          <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
         </article>
       </div>
         `
@@ -117,6 +136,8 @@ function displayRecipes(data) {
     //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
+
+    
 
     // document.querySelector("a").addEventListener("click", data[i].sourceUrl)
     // let modalBtn = document.getElementById("modal-btn")
@@ -142,17 +163,18 @@ function displayRecipes(data) {
 function website(id) {
     //  var id = data.id
     // believe id variable needs altering
-    console.log(id);
+    console.log("website-id",id);
    
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
         .then(function (response) {
             return response.json();
         }).then(function (data) {
-            console.log(data);
+            console.log("recipe",data);
 
             recipes = data;
             
             // document.querySelector("a").addEventListener("click", data.sourceUrl)
+            window.open(data.sourceUrl, "_blank")
             console.log(data.sourceUrl)
             // window.location = "data.sourceUrl"
 
