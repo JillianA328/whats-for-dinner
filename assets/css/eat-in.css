@@ -55,7 +55,7 @@ footer.footer {
 }
 
 .background-image {
-    background-image: url(eat_in.jpg);
+    background-image: url(../images/eat_in.jpg);
     background-size: cover;
 }
 
