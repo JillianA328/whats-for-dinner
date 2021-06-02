@@ -54,6 +54,14 @@
     border: 1px solid black; 
     border-radius: 300px;
     box-shadow:5px 5px 5px #999;
+    height: 300px;
+}
+
+.eat-out-img {
+    height: 50%;
+    width: 50%;
+  
+
 }
 
 .title {
