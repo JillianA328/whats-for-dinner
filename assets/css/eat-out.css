@@ -16,9 +16,9 @@ header h1 {
     padding: 0px 0px 0px 20px;
 }
 
-.columns.is-mobile.has-text-centered {
+/* .columns.is-mobile.has-text-centered {
     height: 100vh;
-}
+} */
 
 .navbar-menu {
     position: fixed; 
