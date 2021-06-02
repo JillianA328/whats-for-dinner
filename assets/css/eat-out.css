@@ -147,6 +147,13 @@ div.column {
 #displayRest {
     margin: 100px;
     color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /*this is the styling for card */
+}
+
+.subtitle {
+    width: 100%; /*iframe styling*/
 }
 
 #zip-code {

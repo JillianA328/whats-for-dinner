@@ -45,7 +45,7 @@ $(document).ready(function () {
                         //console.log(restName);
 
                         //card elements
-                        var card = $('<div>').addClass('card column is-4 m-1 has-background-orange').attr('id', 'restaurantInfo');
+                        var card = $('<div>').addClass('card column is-3 m-1 has-background-orange').attr('id', 'restaurantInfo');
                         var cardBody = $('<div>').addClass('card-content');
                         var cardTitle = $('<p>').addClass('title is-size-2-mobile').text(restName);
                         var cardMap = $('<iframe>').addClass('subtitle').attr('src', `https://www.google.com/maps?q=${restAddress}&output=embed`);
