@@ -31,16 +31,19 @@ header h1 {
     color: var(--primary-color);
 }
 
-footer.footer, div.navbar-menu, .div.title {
-    padding: 10px;
-}
-
 footer.footer {
+    padding: 15px;
+    margin-bottom: 20px;
     position: fixed;
     bottom:0;
     left:0;
     right:0;
-    color: var(--secondary-color);
+}
+
+
+div.navbar-menu, .div.title {
+    padding: 10px;
+    
 }
 
 .navbar-item.is-expanded {
@@ -49,17 +52,22 @@ footer.footer {
 }
 
 .navbar-menu {
-    
     background-image: linear-gradient(45deg, var(--quaternary-color) 0%, orange 52%, var(--quaternary-color) 90%);
     color: var(--primary-color);
 }
 
-.background-image {
-    background-image: url(../images/eat_in.jpg);
-    background-size: cover;
+footer.footer {
+    background-image: linear-gradient(45deg, var(--quaternary-color) 0%, orange 52%, var(--quaternary-color) 90%);
+    color: var(--secondary-color);
 }
 
-.info {
+.background-image {
+    background-image: url(../images/eat_in.jpg);
+    background-image: cover;
+    
+}
+
+.info{
     padding-top: 20px;
     background-color: var(--primary-color);
     margin-top: 50px;
@@ -68,6 +76,15 @@ footer.footer {
     margin-bottom: 50px;
     border-radius: 15px;
     box-shadow: black;
+}
+
+form {
+    border-radius: 15px;
+   
+    margin: 10px;
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif; 
 }
 
 input {
@@ -79,9 +96,9 @@ input {
 }
 
 .column {
-    margin-top: px;
-    margin-bottom: 30px;
-    border-radius: 15px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    
 }
 
 div.subtitle {
@@ -90,9 +107,9 @@ div.subtitle {
 
 #search-btn {
     border-radius: 15px;
-    padding: 20px 55px;
+    padding: 15px 40px;
     margin: px;
-    background-color: var(--primary-color);
+    background-color: #B80000;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Ubuntu', sans-serif;    
