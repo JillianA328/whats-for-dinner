@@ -83,5 +83,13 @@ $(document).ready(function () {
     //     zipApi();
     // };
 
-    //end of document ready function
+    function reset() {
+        $("#clear-btn").on("click", function () {
+            $("#displayRest").val("");
+        })};
+
+    reset();
+
+
+        //end of document ready function
 });
