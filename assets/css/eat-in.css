@@ -121,12 +121,14 @@ div.subtitle {
 }
 
 .tiles {
-    background-color: beige;
-}
+    margin: 5px 500px;
+    margin-bottom: 50px;
 
-#card {
+} 
+
+#recipe-card {
     margin: 5px 500px;
     margin-bottom: 50px;
     background-color: rgba(252, 123, 2, 0.63);
     color: white;
-}
+} 

@@ -98,7 +98,7 @@ function displayRecipes(data) {
         console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
-        <article data-id=${data[i].id} class="tile is-child notification is-info">
+        <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
           <p class="title">${data[i].title}</p>
           <p class="subtitle">Likes:${data[i].likes}</p>
           <figure class="image is-4by3">
