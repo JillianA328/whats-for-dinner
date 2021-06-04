@@ -135,6 +135,10 @@ div.subtitle {
     position: static;
 } 
 
+figure.is-4by3 img {
+    position: static;
+}
+
 /* .image {
     position: static;
 } */

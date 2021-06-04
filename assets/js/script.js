@@ -101,9 +101,9 @@ function displayRecipes(data) {
         <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
           <p class="title">${data[i].title}</p>
           <p class="subtitle">Likes:${data[i].likes}</p>
-          <figure class="image is-4by3">
+          
             <img src="${data[i].image}">
-          </figure>
+          
           <div id=${data[i].id}>
           </div>
           <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
