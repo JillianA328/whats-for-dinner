@@ -16,6 +16,7 @@ var getRecipes = function (event) {
         }
         console.log(search)
         // website()
+
     }
 
     // create variable to select IDs from HTML
@@ -77,8 +78,11 @@ var getRecipes = function (event) {
 
             //     
             // })
+
+
             console.log("function was called");
         });
+
 }
 
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
@@ -99,7 +103,7 @@ function displayRecipes(data) {
           <p class="subtitle">Likes:${data[i].likes}</p>
           
             <img src="${data[i].image}">
-          
+         
           <div id=${data[i].id}>
           </div>
           <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
@@ -112,6 +116,7 @@ function displayRecipes(data) {
     //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
+
 }
 
 function website(id) {
@@ -131,6 +136,7 @@ function website(id) {
             window.open(data.sourceUrl, "_blank")
             console.log(data.sourceUrl)
             // window.location = "data.sourceUrl
+
         })
     // console.log(id)
 }
