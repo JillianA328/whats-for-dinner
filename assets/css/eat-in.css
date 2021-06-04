@@ -121,8 +121,9 @@ div.subtitle {
 }
 
 .tiles {
-    margin: 5px 500px;
+    margin: 5px 50px;
     margin-bottom: 50px;
+    /* position: static; */
 
 } 
 
@@ -131,4 +132,9 @@ div.subtitle {
     margin-bottom: 50px;
     background-color: rgba(252, 123, 2, 0.63);
     color: white;
+    position: static;
 } 
+
+/* .image {
+    position: static;
+} */
