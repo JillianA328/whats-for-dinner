@@ -41,7 +41,7 @@ var getRecipes = function (event) {
                 response.json().then(function (data) {
                     console.log("API", data);
 
-                    localStorage.setItem("recipeKey", JSON.stringify(data));
+                    // localStorage.setItem("recipeKey", JSON.stringify(data));
                     displayRecipes(data);
                     // website(data);
                     for (var i = 0; i < data.length; i++) {
@@ -118,6 +118,8 @@ function displayRecipes(data) {
     //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
+
+
 
     function reset() {
         $("#clear-btn").on("click", function () {
