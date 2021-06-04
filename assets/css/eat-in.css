@@ -105,7 +105,7 @@ div.subtitle {
     padding-bottom: 40px;
 }
 
-#search-btn, #searchBtn {
+#search-btn, #searchBtn, #clear-btn {
     border-radius: 15px;
     padding: 15px 40px;
     margin: px;
@@ -113,6 +113,10 @@ div.subtitle {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Ubuntu', sans-serif;    
+}
+#clear-btn:hover {
+    filter: blur(1px);
+    border-radius: 15px;
 }
 
 #search-btn, #searchBtn:hover {
