@@ -52,7 +52,7 @@ $(document).ready(function () {
                         //var cardSub = $('<p>').addClass('subtitle is-size-4-mobile').text(restAddress);
                         var cardFooter = $('<footer>').addClass('card-footer');
                         var cardNum = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `tel:${restPhone}`).text(`${restPhone}`);
-                        var cardUrl = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `${restWebsite}`).html(`Website`);
+                        var cardUrl = $('<a>').addClass('card-footer-item is-size-4-mobile').attr('href', `${restWebsite}`).html(`Website`); //not all links are functional this will be updated for 2.0
                         $("a").attr("target", "_blank");
 
                         //add info to card

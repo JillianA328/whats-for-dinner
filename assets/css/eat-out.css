@@ -182,3 +182,29 @@ input {
 /* #cuisine {
     padding: 10px 42px;
 } */
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+    }
+
+  }
