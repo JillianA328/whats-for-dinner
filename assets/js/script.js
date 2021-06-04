@@ -40,6 +40,8 @@ var getRecipes = function (event) {
             if (response.ok) {
                 response.json().then(function (data) {
                     console.log("API", data);
+
+                    localStorage.setItem("recipeKey", JSON.stringify(data));
                     displayRecipes(data);
                     // website(data);
                     for (var i = 0; i < data.length; i++) {
