@@ -119,6 +119,14 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
+    function reset() {
+        $("#clear-btn").on("click", function () {
+            $(displayRecipes).val("");
+        })
+    };
+
+    reset();
+
 }
 
 function website(id) {
