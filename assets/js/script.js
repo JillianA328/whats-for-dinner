@@ -90,20 +90,20 @@ function displayRecipes(data) {
     // console.log(getStorage)
 
 
-    for (let i = 0; i < parseStorage.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         console.log("Data", data)
         var recipe = data[i];
 
         console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
-        <article data-id=${parseStorage[i].id} class="tile is-child notification is-info" id="recipe-card">
-          <p class="title">${parseStorage[i].title}</p>
-          <p class="subtitle">Likes:${parseStorage[i].likes}</p>
+        <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
+          <p class="title">${data[i].title}</p>
+          <p class="subtitle">Likes:${data[i].likes}</p>
           
-            <img src="${parseStorage[i].image}">
+            <img src="${data[i].image}">
          
-          <div id=${parseStorage[i].id}>
+          <div id=${data[i].id}>
           </div>
           <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
         </article>
