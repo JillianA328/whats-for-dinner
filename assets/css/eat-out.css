@@ -16,9 +16,9 @@ header h1 {
     padding: 0px 0px 0px 20px;
 }
 
-.columns.is-mobile.has-text-centered {
+/* .columns.is-mobile.has-text-centered {
     height: 100vh;
-}
+} */
 
 .navbar-menu {
     position: fixed; 
@@ -147,6 +147,13 @@ div.column {
 #displayRest {
     margin: 100px;
     color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /*this is the styling for card */
+}
+
+.subtitle {
+    width: 100%; /*iframe styling*/
 }
 
 #zip-code {
@@ -175,3 +182,29 @@ input {
 /* #cuisine {
     padding: 10px 42px;
 } */
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+    }
+
+  }

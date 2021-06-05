@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's For Dinner > Eat Out</title>
-    <link rel="stylesheet" href="assets/css/eat-out.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap">
+    <link rel="stylesheet" href="assets/css/eat-out.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                         Home
                     </a>
                     <a class="navbar-item is-expanded" href="about.html">
-                       About
+                        About
                     </a>
                     <a class="navbar-item is-expanded" href="eat-in.html">
                         Eat In
@@ -33,7 +34,7 @@
     </header>
 
     <!--Search Section-->
-    <div class="columns is-mobile has-text-centered">
+    <div class="columns is-mobile has-text-centered" id="searchRest">
         <div class="column is-3 background-image">
             <div class="title">Search Bar</div>
             <div class="subtitle">Find restaurants near you!</div>
@@ -45,10 +46,10 @@
                             <input type="text" placeholder="Enter Zip Code" id="zip-code">
                         </div>
                         <!-- <div class="column"> -->
-                            <!--Dropdown menu for food options-->
-                            <!-- <label for="cuisine">Choose Cuisine Type:</label>
+                        <!--Dropdown menu for food options-->
+                        <!-- <label for="cuisine">Choose Cuisine Type:</label>
                         </div> -->
-                            <!-- <select id="cuisine">
+                        <!-- <select id="cuisine">
                                 <option value="option1">option1</option>
                                 <option value="option2">option2</option>
                                 <option value="option3">option3</option>
@@ -72,9 +73,13 @@
 
         <!--Returned Items from Search-->
         <div class="column">
-            <div class="content has-text-centered" id="displayRest">
+            <div class="content has-text-centered">
                 Excited for the Endless Possibilities!? Search your zip code now for some great spots to eat out!
+                <div class="content is-mobile" id="displayRest">
+
+                </div>
             </div>
+
         </div>
     </div>
 
