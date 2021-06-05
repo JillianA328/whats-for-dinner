@@ -186,15 +186,30 @@ input {
 @media screen and (max-width: 992px) {
     body {
       background-color: blue;
-
+      height: auto; /*checkout setting initial height*/
     }
+
     .navbar-menu {
         display: block;
+        position: static;
         visibility: visible;
         font-size: 1rem;
         text-align: center;
     }
-    
+ 
+    form {
+        margin-left: 250px;
+        margin-top: -100px;
+    }
+
+    .hide-it {
+        display: none;
+    }
+
+    h3, h4{
+        display: none;
+    }
+   
   }
   
   /* On screens that are 600px or less, set the background color to olive */
