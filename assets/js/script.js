@@ -42,7 +42,6 @@ var getRecipes = function (event) {
                     console.log("API", data);
 
                     localStorage.setItem("recipeKey", JSON.stringify(data));
-        
                     displayRecipes(data);
                     // website(data);
                     for (var i = 0; i < data.length; i++) {
@@ -96,21 +95,22 @@ function displayRecipes(data) {
     var getStorage = localStorage.getItem("recipeKey");
     var parseStorage = JSON.parse(getStorage);
     console.log(parseStorage)
-    console.log(getStorage)
-    // website();
-    for (let i = 0; i < parseStorage.length; i++) {
+    // console.log(getStorage)
+
+
+    for (let i = 0; i < data.length; i++) {
         console.log("Data", data)
         var recipe = data[i];
 
         console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
-        <article data-id=${parseStorage[i].id} class="tile is-child notification is-info" id="recipe-card">
-          <p class="title">${parseStorage[i].title}</p>
+        <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
+          <p class="title">${data[i].title}</p>
           <p class="subtitle">Likes:${data[i].likes}</p>
-          <figure class="image is-4by3">
+          
             <img src="${data[i].image}">
-          </figure>
+         
           <div id=${data[i].id}>
           </div>
           <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
@@ -123,6 +123,16 @@ function displayRecipes(data) {
     //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
+
+
+
+    function reset() {
+        $("#clear-btn").on("click", function () {
+            $(displayRecipes).val("");
+        })
+    };
+
+    reset();
 
 }
 
