@@ -2,6 +2,8 @@ var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 var recipeId = [];
 
+
+
 // greated get recipes function 
 var getRecipes = function (event) {
     event.preventDefault()
@@ -19,16 +21,6 @@ var getRecipes = function (event) {
 
     }
 
-    // create variable to select IDs from HTML
-    // fetch API https://api.spoonacular.com/recipes/{id}/information and include variable that selects IDs in place of ID
-    // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
-    // fetch(`https://api.spoonacular.com/recipes/findByIngredients?key=${apiKey}`);
-    // https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true.
-    // var apiURL =`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`
-
-    // //change API
-    // var apiURL = `https://api.spoonacular.com/recipes/665734/information?apiKey=${apiKey}`
-    // console.log(apiURL)
 
     // var ingredients, recipes;
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`)
@@ -98,20 +90,20 @@ function displayRecipes(data) {
     // console.log(getStorage)
 
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < parseStorage.length; i++) {
         console.log("Data", data)
         var recipe = data[i];
 
         console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
-        <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
-          <p class="title">${data[i].title}</p>
-          <p class="subtitle">Likes:${data[i].likes}</p>
+        <article data-id=${parseStorage[i].id} class="tile is-child notification is-info" id="recipe-card">
+          <p class="title">${parseStorage[i].title}</p>
+          <p class="subtitle">Likes:${parseStorage[i].likes}</p>
           
-            <img src="${data[i].image}">
+            <img src="${parseStorage[i].image}">
          
-          <div id=${data[i].id}>
+          <div id=${parseStorage[i].id}>
           </div>
           <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
         </article>
@@ -130,8 +122,9 @@ function displayRecipes(data) {
         $("#clear-btn").on("click", function () {
             $(displayRecipes).val("");
         })
-    };
 
+    };
+    // have just a clear button with clear local storage command inside instead of reset function
     reset();
 
 }
