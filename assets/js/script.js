@@ -2,7 +2,9 @@ var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 var recipeId = [];
 
-
+if (localStorage) {
+    
+}
 
 // greated get recipes function 
 var getRecipes = function (event) {
@@ -47,32 +49,6 @@ var getRecipes = function (event) {
                     // website(recipeId)
                 })
             }
-            // ingredients = data;
-            // console.log(ingredients);
-
-            // for (var i=0; i<data.length; i++) {
-            //     var id = data[i].id;
-            // // var id = ingredients.id;
-            //  console.log(data[i].id);
-            //  recipeId.push(id);
-            //  console.log(recipeId);   
-
-            // }
-
-            //  return fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
-
-
-            //  }).then(function (response) {
-            //      return response.json();
-            //  }).then(function (data) {
-            //      console.log(data);
-            // 
-            //     recipes = data;
-
-
-            //     
-            // })
-
 
             console.log("function was called");
         });
