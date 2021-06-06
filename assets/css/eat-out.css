@@ -111,6 +111,10 @@ div.column {
     background-color: var(--primary-color);
 }
 
+form {
+    
+}
+
 input {
     padding: 10px 58px;
     background-color: white;
