@@ -199,12 +199,12 @@ input {
 
 
 /*Media Queries*/
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     body {
       background-color: blue;
       height: auto; /*checkout setting initial height*/
-    }
-
+    /* } */
+/* 
     .navbar-menu {
         display: block;
         position: static;
@@ -227,9 +227,9 @@ input {
     }
    
   }
-  
+   */
   /* On screens that are 600px or less, set the background color to olive */
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     body {
       background-color: olive;
     }
@@ -238,4 +238,4 @@ input {
         visibility: visible;
     }
 
-  }
+  } */
