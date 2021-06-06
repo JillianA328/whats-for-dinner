@@ -76,7 +76,6 @@ var getRecipes = function (event) {
 
             console.log("function was called");
         });
-
 }
 
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
