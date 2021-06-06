@@ -86,7 +86,8 @@ function displayRecipes(data) {
     var htmlCode = "";
     var getStorage = localStorage.getItem("recipeKey");
     var parseStorage = JSON.parse(getStorage);
-    console.log(parseStorage)
+
+    // console.log(parseStorage)
     // console.log(getStorage)
 
 
