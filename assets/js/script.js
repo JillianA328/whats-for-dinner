@@ -85,8 +85,8 @@ function displayRecipes(data) {
     // var id = data.id;
     var htmlCode = "";
     var getStorage = localStorage.getItem("recipeKey");
-    var parseStorage = JSON.parse(getStorage);
-
+    var parseStorage = JSON.parse(getStorage); 
+    
     // console.log(parseStorage)
     // console.log(getStorage)
 
@@ -115,7 +115,9 @@ function displayRecipes(data) {
     //       </button>
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
-
+    
+    getStorage()
+    console.log(getStorage)
 
 
     function reset() {
