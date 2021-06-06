@@ -29,16 +29,19 @@ header h1 {
 .navbar-menu, footer.footer, footer strong {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    width: 100%;
 }
 
-footer.footer {
+ footer.footer {
     padding: 15px;
     margin-bottom: 20px;
-    position: fixed;
-    bottom:0;
+    width:100%;
+    height:10vh;
+    /* position: fixed; 
+     bottom:0;
     left:0;
-    right:0;
-}
+    right:0; */
+} 
 
 div.navbar-menu, .div.title {
     padding: 10px;
@@ -126,6 +129,7 @@ div.subtitle {
 .tiles {
     margin: 5px 50px;
     margin-bottom: 50px;
+    max-width: 50%;
     /* position: static; */
 
 } 
@@ -146,12 +150,21 @@ div.subtitle {
     position: static;
 } */
 @media only screen and (max-width: 320px) {
- 
+  .navbar-menu {
+      width: 100%;
+}
+/* footer.footer {
+    position: sticky;
+} */
 }
 
-
 @media only screen and (max-width: 768px) {
-
+   .navbar-menu{
+       width: 100%;
+   }
+   /* footer.footer {
+       position: sticky;
+   } */
 }
 
 @media only screen and (max-width: 1024px) {
