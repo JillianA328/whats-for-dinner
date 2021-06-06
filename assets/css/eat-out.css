@@ -201,7 +201,6 @@ input {
 /*Media Queries*/
 @media screen and (max-width: 992px) {
     body {
-
       height: auto; /*checkout setting initial height*/
     }
 
@@ -222,9 +221,6 @@ input {
         display: none;
     }
 
-    h3, h4{
-        display: none;
-    }
     #search-btn, #clear-btn {
         padding: 15px;
         margin: 15px;
