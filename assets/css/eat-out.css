@@ -173,13 +173,14 @@ div.column {
 }
 
 #search-btn, #clear-btn, input {
-    padding: 10px 40px;
-    margin: 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--quaternary-color);
+    border-radius: 15px;
+    padding: 15px 40px;
+    margin: px;
+    background-color: #B80000;
     color: var(--primary-color);
-    font-family: 'Ubuntu', sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;    
 }
 
 #search-btn:hover, #clear-btn:hover {
@@ -193,63 +194,94 @@ input {
     background-color: white;
 }
 
-/* #cuisine {
-    padding: 10px 42px;
-} */
-
 .no-show {
     display: none;
 }
 
+/* .hide-it {
+    margin-top: 100px;
+} */
+
 
 /*Media Queries*/
-/* @media screen and (max-width: 992px) {
-    body {
-      height: auto; /*checkout setting initial height*/
-    /* } */
-/* 
+@media only screen and (max-width: 1024px) {
     .navbar-menu {
         display: block;
         position: static;
         visibility: visible;
         font-size: 1rem;
         text-align: center;
-        width: 100%;
-    }
- 
-    form {
-        margin-left: 250px;
-        margin-top: -340px;
     }
 
-    .hide-it {
-        display: none;
+    div.title {
+        margin-top: 30px;
     }
 
-    #search-btn, #clear-btn {
-        padding: 15px;
-        margin: 15px;
+    div.column {
+        width: 250px;
+        padding-top: 10px;
     }
 
-    div.content.has-text-centered {
-        margin-top: 200px;
-        margin-left: -80px;
-        margin-right: 50px;
-    }
-  }
-   */
-  /* On screens that are 600px or less, set the background color to olive */
-  /* @media screen and (max-width: 600px) {
-    body {
-      background-color: olive;
-    }
-    .navbar-menu {
-        display: block;
-        visibility: visible;
+    div.input {
+        margin: 0px;
+        padding: 0px;
     }
 
-    .hero {
-        display: none;
+    #zip-code {
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 
-  }
+    #search-btn {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .navbar-menu{
+        width: 768px;
+    }
+
+    div.title {
+        margin-top: 30px;
+    }
+
+    div.column {
+        width: 768px;
+        padding-top: 10px;
+    }
+
+    #zip-code {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    div.navbar-menu {
+        width: 320px;
+    }
+
+    div.title {
+        margin-top: 20px;
+    }
+
+    div.title-section {
+        margin-left: 30px;
+    }
+
+    div.column {
+        width: 332px;
+        padding-top: 10px;
+    }
+
+    #zip-code {
+        padding: 10px 5px;
+        margin-bottom: 10px;
+    }
+
+    /* div#restaurantInfo.card.column.is-4.m-1.has-background-orange {
+        padding: 0px;
+    } */
+}
+  
+
