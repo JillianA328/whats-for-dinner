@@ -90,7 +90,6 @@ function displayRecipes(data) {
     // console.log(parseStorage)
     // console.log(getStorage)
 
-
     for (let i = 0; i < data.length; i++) {
         console.log("Data", data)
         var recipe = data[i];
