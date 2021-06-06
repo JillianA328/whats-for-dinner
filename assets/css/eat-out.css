@@ -170,6 +170,8 @@ div.column {
     color: black;
     font-family: 'Ubuntu', sans-serif; 
     outline: none;
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 #search-btn, #clear-btn, input {
@@ -198,10 +200,13 @@ input {
     display: none;
 }
 
-/* .hide-it {
-    margin-top: 100px;
-} */
+a.card-footer-item.is-size-4-mobile {
+    color: white;
+}
 
+a.card-footer-item.is-size-4-mobile:hover {
+    color: var(--quaternary-color);
+}
 
 /*Media Queries*/
 @media only screen and (max-width: 1024px) {
@@ -236,7 +241,12 @@ input {
     #search-btn {
         margin-bottom: 20px;
     }
+
+    footer.footer {
+        width: 1024px;
+    }
 }
+
 @media only screen and (max-width: 768px) {
     .navbar-menu{
         width: 768px;
@@ -247,12 +257,17 @@ input {
     }
 
     div.column {
-        width: 768px;
+        width: 780px;
         padding-top: 10px;
     }
 
     #zip-code {
+        width: 300px;
         margin-bottom: 20px;
+    }
+
+    footer.footer {
+        width: 768px;
     }
 }
 
@@ -279,9 +294,14 @@ input {
         margin-bottom: 10px;
     }
 
-    /* div#restaurantInfo.card.column.is-4.m-1.has-background-orange {
-        padding: 0px;
-    } */
+    footer.footer {
+        width: 320px;
+    }
+
+    #displayRest {
+        width: 300px;
+        margin: 40px 20px;
+    }
 }
   
 
