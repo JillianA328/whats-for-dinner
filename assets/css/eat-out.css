@@ -188,10 +188,6 @@ div.column {
     font-family: 'Ubuntu', sans-serif; 
 }
 
-form {
-    
-}
-
 input {
     padding: 10px 58px;
     background-color: white;
@@ -207,11 +203,11 @@ input {
 
 
 /*Media Queries*/
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     body {
       height: auto; /*checkout setting initial height*/
-    }
-
+    /* } */
+/* 
     .navbar-menu {
         display: block;
         position: static;
@@ -238,9 +234,9 @@ input {
         margin-top: 200px;
     }
   }
-  
+   */
   /* On screens that are 600px or less, set the background color to olive */
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     body {
       background-color: olive;
     }
