@@ -74,6 +74,9 @@ $(document).ready(function () {
     })
     loadPage(); // This runs every time the page loads
 
-    
+    $("#clear-btn").on("click", function () {
+        localStorage.clear()
+    })
+
 });
 
