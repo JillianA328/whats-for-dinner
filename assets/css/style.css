@@ -87,10 +87,10 @@
     }
 
     .header {
-        /* height: 5px;
+        height: 5px;
         width: 350px;
         line-height: 45px;
-        margin-top: none; */
+        margin-top: none;
         position: absolute;
         text-size-adjust: xx-small;
         left: 50%;
