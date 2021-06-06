@@ -217,7 +217,7 @@ input {
     }
  
     form {
-        margin-left: 310px;
+        margin-left: 250px;
         margin-top: -340px;
     }
 
@@ -232,6 +232,8 @@ input {
 
     div.content.has-text-centered {
         margin-top: 200px;
+        margin-left: -80px;
+        margin-right: 50px;
     }
   }
   
