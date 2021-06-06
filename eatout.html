@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner > Eat Out</title>
+   <!-- <link rel="stylesheet" href="assets/css/eat-out.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap%22%3E">
+    <link rel="stylesheet" href="assets/css/eatout.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu">
+                <h1>Eat-Out</h1>
+                <div class="navbar-end">
+                    <a class="navbar-item is-expanded">
+                        Home
+                    </a>
+                    <a class="navbar-item is-expanded">
+                        Eat In
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Search Section-->
+    <div class="columns is-mobile is-vcentered">
+        <div class="column is-3">
+            <div class="title">Search Bar</div>
+            <div class="subtitle">Find restaurants near you!</div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <form action="">
+                        <!--Search Box-->
+                        <input type="text" placeholder="Enter City or Zip Code" id="zip-code">
+
+                        <!--Dropdown menu for food options-->
+                        <label for="cuisine">Choose Cuisine Type:</label>
+                        <select id="cuisine">
+                            <option value="option1">option1</option>
+                            <option value="option2">option2</option>
+                            <option value="option3">option3</option>
+                            <option value="option4">option4</option>
+                        </select>
+
+                        <!--Submit search selections to search-->
+                        <button id="search-btn">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Returned Items from Search-->
+        <div id="result" class="column">
+            <div class="content has-text-centered " id="displayRest">
+                Placeholder for results from API.
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Made with &hearts;</strong> by Jillian, Marykate, Leslie, and Greg.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="eatout.js"></script>
+</body>
+
+</html>

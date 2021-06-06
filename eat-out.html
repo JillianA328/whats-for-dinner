@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner >Eat Out</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap">
+    <link rel="stylesheet" href="assets/css/eat-out.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar level" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu">
+                <h1>Eat Out</h1>
+                <div class="navbar-end">
+                    <a class="navbar-item is-expanded" href="index.html">
+                        Home
+                    </a>
+                    <a class="navbar-item is-expanded" href="about.html">
+                        About
+                    </a>
+                    <a class="navbar-item is-expanded" href="eat-in.html">
+                        Eat In
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Search Section-->
+    <div class="columns is-desktop has-text-centered content" id="searchRest">
+        <div class="column is-3 background-image">
+            <div class="title-section">
+                <div class="title">Search Bar</div>
+                <div class="subtitle">Find restaurants near you!</div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <form action="">
+                        <div class="column">
+                            <div>
+                                <!--Search Box-->
+                                <input type="text" placeholder="Enter Zip Code" id="zip-code">
+                            </div>
+                            <div>
+                                <!--Submit search selections to search-->
+                                <button id="search-btn">
+                                    Search
+                                </button>
+                                <button id="clear-btn">
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Returned Items from Search-->
+        <div class="column">
+            <div class="content has-text-centered">
+                <!--results display with this id-->
+                <div class="content is-mobile" id="displayRest">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Made with &hearts;</strong> by Jillian, Marykate, Leslie, and Greg.
+            </p>
+        </div>
+    </footer>
+
+    <!--For JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/js/eatout.js"></script>
+</body>
+
+</html>
