@@ -1,10 +1,7 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
 var recipeId = [];
-var id 
-// var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
-// https://api.spoonacular.com/recipes/visualizeRecipe
-// fetch(apiUrl);
+
 // greated get recipes function 
 var getRecipes = function (event) {
     event.preventDefault()
@@ -19,7 +16,7 @@ var getRecipes = function (event) {
         }
         console.log(search)
         // website()
-        
+
     }
 
     // create variable to select IDs from HTML
@@ -38,23 +35,24 @@ var getRecipes = function (event) {
         .then(function (response) {
 
             //     return response.json();
-
             // }).then(function (data) {
             // console.log(response);
             if (response.ok) {
                 response.json().then(function (data) {
                     console.log("API", data);
+
+                    // localStorage.setItem("recipeKey", JSON.stringify(data));
                     displayRecipes(data);
                     // website(data);
-                    for (var i=0; i<data.length; i++) {
-                            var id = data[i].id;
+                    for (var i = 0; i < data.length; i++) {
+                        var id = data[i].id;
                         //  var id = ingredients.id;
-                          console.log(data[i].id);
-                          recipeId.push(id);
+                        console.log(data[i].id);
+                        recipeId.push(id);
                     }
-                    console.log(recipeId);   
+                    console.log("recipeId", recipeId);
                     console.log(id)
-                    website(recipeId)
+                    // website(recipeId)
                 })
             }
             // ingredients = data;
@@ -92,25 +90,28 @@ var getRecipes = function (event) {
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
 
 function displayRecipes(data) {
-    var id = data.id;
+    // var id = data.id;
     var htmlCode = "";
     // website();
     for (let i = 0; i < data.length; i++) {
+        console.log("Data", data)
+        var recipe = data[i];
+
+        console.log('recipe', recipe, data)
         htmlCode += `
         <div class="tile is-parent">
-        <article data-id=${data[i].id} class="tile is-child notification is-info">
+        <article data-id=${data[i].id} class="tile is-child notification is-info" id="recipe-card">
           <p class="title">${data[i].title}</p>
           <p class="subtitle">Likes:${data[i].likes}</p>
-          <figure class="image is-4by3">
+          
             <img src="${data[i].image}">
-          </figure>
+         
           <div id=${data[i].id}>
           </div>
-          <a href='javascript:website()'>View Recipe<a>
+          <button id="searchBtn" onClick="website(\`${recipe.id}\`)">View Recipe</button>
         </article>
       </div>
         `
-        
     }
 
     // <button class="data-url" data-id=${data[i].id}>View Recipie
@@ -118,70 +119,38 @@ function displayRecipes(data) {
     console.log(htmlCode)
     document.getElementById("card").innerHTML = htmlCode
 
-    // document.querySelector("a").addEventListener("click", data[i].sourceUrl)
-    // let modalBtn = document.getElementById("modal-btn")
-    // let modal = document.querySelector(".modal")
-    // let closeBtn = document.querySelector(".close-btn")
 
-    // modalBtn.onclick = function () {
-    //     modal.getElementsByClassName.display = "block"
-    // }
-    // closeBtn.onclick = function() {
-    //     modal.style.display = "none"
-    // }
-    // window.onclick = function(e) {
-    //     if(e.target == modal) {
-    //         modal.style.display = "none"
-    //     }
-    
-    // }
-    // website();
+
+    function reset() {
+        $("#clear-btn").on("click", function () {
+            $(displayRecipes).val("");
+        })
+    };
+
+    reset();
+
 }
-
 
 function website(id) {
     //  var id = data.id
     // believe id variable needs altering
-    console.log(id);
-   
+    console.log("website-id", id);
+
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
         .then(function (response) {
             return response.json();
         }).then(function (data) {
-            console.log(data);
+            console.log("recipe", data);
 
             recipes = data;
-            
+
             // document.querySelector("a").addEventListener("click", data.sourceUrl)
+            window.open(data.sourceUrl, "_blank")
             console.log(data.sourceUrl)
-            // window.location = "data.sourceUrl"
-
-            // $("a").attr("target","_blank");
-
-            //want to add modal upon "view recipe" button click
-
-    //         let modalBtn = document.getElementById("modal-btn")
-    // let modal = document.querySelector(".modal")
-    // let closeBtn = document.querySelector(".close-btn")
-
-    // modalBtn.onclick = function () {
-    //     modal.getElementsByClassName.display = "block"
-    // }
-    // closeBtn.onclick = function() {
-    //     modal.style.display = "none"
-    // }
-    // window.onclick = function(e) {
-    //     if(e.target == modal) {
-    //         modal.style.display = "none"
-    //     }
-    
-    // }
-    
+            // window.location = "data.sourceUrl
 
         })
     // console.log(id)
-
-    
 }
 
 // website();

@@ -16,9 +16,9 @@ header h1 {
     padding: 0px 0px 0px 20px;
 }
 
-.columns.is-mobile.has-text-centered {
+/* .columns.is-mobile.has-text-centered {
     height: 100vh;
-}
+} */
 
 .navbar-menu {
     position: fixed; 
@@ -64,10 +64,20 @@ body {
 }
 
 .hero {
-    background-image: url(../images/about-us.jpg);
+    background-image: url(../images/about.jpg);
+    background-size: contain;
     padding: 50px;
     color: var(--primary-color);
-    font-size: 30px;
+}
+
+h2.page-title.has-text-centered {
+    color: var(--quaternary-color);
+    font-size: 50px;
+    font-weight: bolder;
+}
+.hero h2 {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
 }
 
 p.about {
@@ -80,6 +90,38 @@ p.about {
     
 }
 
+div.card {
+    margin: 5px 500px;
+    margin-bottom: 50px;
+    background-color: rgba(252, 123, 2, 0.63);
+    color: white;
+}
+
+p.card-footer-item a {
+    color: white;
+}
+
+p.card-footer-item:hover {
+    color: var(--quaternary-color);
+    background-color: var(--primary-color);
+}
+
+p.card-footer-item a:hover {
+    color: var(--quaternary-color);
+}
+
+p.title, p.subtitle {
+    color: white;
+}
+
+div.card-content {
+    margin: 25px 5px;
+}
+
+div.form {
+    background-color: var(--primary-color);
+}
+
 div.title {
     padding-top: 40px;
     padding-bottom: 10px;
@@ -88,9 +130,8 @@ div.title {
 }
 
 div.title, div.subtitle, label {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-weight: bolder;
-    background-color: var(--primary-color);
 }
 
 div.subtitle {
@@ -103,12 +144,34 @@ div.column {
     padding-bottom: 20px;
 }
 
+#displayRest {
+    margin: 100px;
+    color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /*this is the styling for card */
+}
+
+.subtitle {
+    width: 100%; /*iframe styling*/
+}
+
+#zip-code {
+    color: black;
+}
+
 #search-btn, #clear-btn, input {
     padding: 10px 40px;
     margin: 15px;
     border-radius: 10px;
     border: none;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+}
+
+#search-btn:hover, #clear-btn:hover {
     background-color: var(--primary-color);
+    color: var(--quaternary-color);
 }
 
 form {
@@ -123,3 +186,29 @@ input {
 /* #cuisine {
     padding: 10px 42px;
 } */
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+    .navbar-menu {
+        display: block;
+        visibility: visible;
+    }
+
+  }
