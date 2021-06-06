@@ -197,6 +197,10 @@ input {
     padding: 10px 42px;
 } */
 
+.no-show {
+    display: none;
+}
+
 
 /*Media Queries*/
 @media screen and (max-width: 992px) {
