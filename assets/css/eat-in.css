@@ -29,6 +29,7 @@ header h1 {
 .navbar-menu, footer.footer, footer strong {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    width: 100%;
 }
 
 footer.footer {
@@ -146,12 +147,15 @@ div.subtitle {
     position: static;
 } */
 @media only screen and (max-width: 320px) {
- 
+  .navbar-menu {
+      width: 100%;
+}
 }
 
-
 @media only screen and (max-width: 768px) {
-
+   .navbar-menu{
+       width: 100%;
+   }
 }
 
 @media only screen and (max-width: 1024px) {
