@@ -1,6 +1,15 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
-var recipeId = [];
+var recipeId;
+
+if (!JSON.parse(localStorage.getItem("recipeKey"))) {
+    recipeId=[];
+    
+}
+else {
+    recipeId=JSON.parse(localStorage.getItem("recipeKey"))
+    displayRecipes(recipeId);
+}
 
 // greated get recipes function 
 var getRecipes = function (event) {
@@ -19,16 +28,6 @@ var getRecipes = function (event) {
 
     }
 
-    // create variable to select IDs from HTML
-    // fetch API https://api.spoonacular.com/recipes/{id}/information and include variable that selects IDs in place of ID
-    // var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients";
-    // fetch(`https://api.spoonacular.com/recipes/findByIngredients?key=${apiKey}`);
-    // https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true.
-    // var apiURL =`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`
-
-    // //change API
-    // var apiURL = `https://api.spoonacular.com/recipes/665734/information?apiKey=${apiKey}`
-    // console.log(apiURL)
 
     // var ingredients, recipes;
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${search}&number=5`)
@@ -41,7 +40,7 @@ var getRecipes = function (event) {
                 response.json().then(function (data) {
                     console.log("API", data);
 
-                    // localStorage.setItem("recipeKey", JSON.stringify(data));
+                    localStorage.setItem("recipeKey", JSON.stringify(data));
                     displayRecipes(data);
                     // website(data);
                     for (var i = 0; i < data.length; i++) {
@@ -55,36 +54,9 @@ var getRecipes = function (event) {
                     // website(recipeId)
                 })
             }
-            // ingredients = data;
-            // console.log(ingredients);
-
-            // for (var i=0; i<data.length; i++) {
-            //     var id = data[i].id;
-            // // var id = ingredients.id;
-            //  console.log(data[i].id);
-            //  recipeId.push(id);
-            //  console.log(recipeId);   
-
-            // }
-
-            //  return fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`)
-
-
-            //  }).then(function (response) {
-            //      return response.json();
-            //  }).then(function (data) {
-            //      console.log(data);
-            // 
-            //     recipes = data;
-
-
-            //     
-            // })
-
 
             console.log("function was called");
         });
-
 }
 
 document.getElementById("searchBtn").addEventListener("click", getRecipes)
@@ -92,7 +64,11 @@ document.getElementById("searchBtn").addEventListener("click", getRecipes)
 function displayRecipes(data) {
     // var id = data.id;
     var htmlCode = "";
-    // website();
+    // var saveRecipe = JSON.parse(localStorage.getItem("recipeKey"));
+    
+    // console.log(parseStorage)
+    // console.log(getStorage)
+
     for (let i = 0; i < data.length; i++) {
         console.log("Data", data)
         var recipe = data[i];
@@ -116,8 +92,17 @@ function displayRecipes(data) {
 
     // <button class="data-url" data-id=${data[i].id}>View Recipie
     //       </button>
-    console.log(htmlCode)
+   
     document.getElementById("card").innerHTML = htmlCode
+    
+    // function reset() {
+        $("#clear-btn").on("click", function () {
+            localStorage.clear()
+        })
+
+    // };
+    // have just a clear button with clear local storage command inside instead of reset function
+    // reset();
 
 
 

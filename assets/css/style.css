@@ -12,16 +12,16 @@
 
 .hero-body {
     box-shadow:10px 10px 10px grey;
-    border-radius: 25px;;
+    border-radius: 25px;
 }
 
 .hero-img {
-   
     background-size: contain;
     width: 100%;
     height: 85%;
     resize: both;
     overflow: scroll;
+    padding-bottom: 55px;
 }
 
 .div.columns.ls-mobile.is-centered {
@@ -41,13 +41,8 @@
     filter: blur(2px);  
 }
 
-.eat-in-column {
-    margin-left: 27%;
-}
-
 .column {
-    padding: 4rem;
-
+    padding: 20rem;
 }
 
 .images {
@@ -60,8 +55,6 @@
 .eat-out-img {
     height: 50%;
     width: 50%;
-  
-
 }
 
 .title {
@@ -70,7 +63,6 @@
 
 .bio {
     margin: 50px;
-    
     font-size: 1.3rem;
     color:rgb(30,94,39);
 }
@@ -80,4 +72,34 @@
 }
 
 
+ @media screen and (max-width: 400px) {
+    p {
+        display: none;
+    }
 
+    .hero {
+        position: relative;
+        margin-top: 0px;
+        padding: -5px;
+        margin-left: 10px;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .header {
+        height: 5px;
+        width: 350px;
+        line-height: 45px;
+        margin-top: none;
+        position: absolute;
+        text-size-adjust: xx-small;
+        left: 50%;
+        width: 350px;
+        transform: translate(-50%, -50%);
+    }
+
+    footer.footer p {
+        visibility: visible;
+
+    }
+ }

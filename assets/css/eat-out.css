@@ -188,6 +188,10 @@ div.column {
     font-family: 'Ubuntu', sans-serif; 
 }
 
+form {
+    
+}
+
 input {
     padding: 10px 58px;
     background-color: white;
