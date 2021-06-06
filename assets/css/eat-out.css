@@ -173,13 +173,14 @@ div.column {
 }
 
 #search-btn, #clear-btn, input {
-    padding: 10px 40px;
-    margin: 15px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--quaternary-color);
+    border-radius: 15px;
+    padding: 15px 40px;
+    margin: px;
+    background-color: #B80000;
     color: var(--primary-color);
-    font-family: 'Ubuntu', sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;    
 }
 
 #search-btn:hover, #clear-btn:hover {
@@ -203,6 +204,33 @@ input {
 
 
 /*Media Queries*/
+@media only screen and (max-width: 320px) {
+    .navbar-menu {
+        width: 100%;
+  }
+  /* footer.footer {
+      position: sticky;
+  } */
+  }
+  
+  @media only screen and (max-width: 768px) {
+     .navbar-menu{
+         width: 100%;
+     }
+     /* footer.footer {
+         position: sticky;
+     } */
+  }
+  
+  @media only screen and (max-width: 1024px) {
+      .navbar-menu {
+          display: block;
+          position: static;
+          visibility: visible;
+          font-size: 1rem;
+          text-align: center;
+      }
+  }
 /* @media screen and (max-width: 992px) {
     body {
       height: auto; /*checkout setting initial height*/

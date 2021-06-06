@@ -18,8 +18,8 @@ This project, assigned by Rutgers Coding Bootcamp, required the creation of an o
 
 ## Website Screenshots
 ### Main Screen
-![Main screen Top](https://user-images.githubusercontent.com/81491306/120933722-65963100-c6c9-11eb-901f-fb33c72b6016.JPG)
-![Main screen Bottom](https://user-images.githubusercontent.com/81491306/120933736-7646a700-c6c9-11eb-867d-9175cd6d1d0c.JPG)
+![Main screen Top](https://user-images.githubusercontent.com/81491306/120937465-8ebfbd00-c6db-11eb-8960-d66a85697596.JPG)
+![Main screen Bottom](https://user-images.githubusercontent.com/81491306/120937475-9e3f0600-c6db-11eb-8bd2-f22a1acd94e5.JPG)
 
 ### Eat In Screen
 ![Eat In Screen with Sample Search Results]()
@@ -33,7 +33,7 @@ This project, assigned by Rutgers Coding Bootcamp, required the creation of an o
 
 # Links
 ## Website
-[Link to Website](https://lchinquee.github.io/humorite/)
+[Link to Website](https://jilliana328.github.io/whats-for-dinner/)
 
 ## GitHub Repo
 [Link to GitHub Repo](https://github.com/JillianA328/whats-for-dinner)
