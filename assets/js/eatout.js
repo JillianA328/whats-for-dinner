@@ -33,7 +33,7 @@ $(document).ready(function () {
                         //console.log(restaurant.restaurant_website);
 
                         //local storage set-up
-                        localStorage.setItem("restKey", JSON.stringify(restaurant));
+                        //localStorage.setItem("restKey", JSON.stringify(restaurant));
 
 
                         //variables to name data.map()
