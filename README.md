@@ -22,10 +22,10 @@ This project, assigned by Rutgers Coding Bootcamp, required the creation of an o
 ![Main screen Bottom](https://user-images.githubusercontent.com/81491306/120937475-9e3f0600-c6db-11eb-8bd2-f22a1acd94e5.JPG)
 
 ### Eat In Screen
-![Eat In Screen with Sample Search Results]()
+![Eat In Screen with Sample Search Results Top](https://user-images.githubusercontent.com/81491306/120943563-ae67dd00-c6fd-11eb-9d2f-3de525bc9783.JPG)
 
 ### Eat Out Screen
-![Eat Out screen with Sample Search Results]()
+![Eat Out screen with Sample Search Results Top](https://user-images.githubusercontent.com/81491306/120943572-bc1d6280-c6fd-11eb-909c-327aa9d956a3.JPG)
 
 ### About Screen
 ![About Screen Top](https://user-images.githubusercontent.com/81491306/120933212-1949f180-c6c7-11eb-9126-cfbc8080b8b0.JPG)

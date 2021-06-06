@@ -245,6 +245,11 @@ a.card-footer-item.is-size-4-mobile:hover {
     footer.footer {
         width: 1024px;
     }
+
+    div.card {
+        width: 500px;
+        margin-left: 270px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -268,6 +273,10 @@ a.card-footer-item.is-size-4-mobile:hover {
 
     footer.footer {
         width: 768px;
+    }
+
+    div.card {
+        margin-left: 140px;
     }
 }
 
@@ -301,6 +310,10 @@ a.card-footer-item.is-size-4-mobile:hover {
     #displayRest {
         width: 300px;
         margin: 40px 20px;
+    }
+
+    div.card {
+        margin-left: 0px;
     }
 }
   
