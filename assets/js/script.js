@@ -1,9 +1,14 @@
 var eatIn = "#eat-in";
 var apiKey = "300a7d2cc57843cd8827b55f1a6ceab1";
-var recipeId = [];
+var recipeId;
 
-if (localStorage) {
+if (!JSON.parse(localStorage.getItem("recipeKey"))) {
+    recipeId=[];
     
+}
+else {
+    recipeId=JSON.parse(localStorage.getItem("recipeKey"))
+    displayRecipes(recipeId);
 }
 
 // greated get recipes function 
@@ -59,8 +64,7 @@ document.getElementById("searchBtn").addEventListener("click", getRecipes)
 function displayRecipes(data) {
     // var id = data.id;
     var htmlCode = "";
-    var getStorage = localStorage.getItem("recipeKey");
-    var parseStorage = JSON.parse(getStorage); 
+    // var saveRecipe = JSON.parse(localStorage.getItem("recipeKey"));
     
     // console.log(parseStorage)
     // console.log(getStorage)
@@ -88,21 +92,17 @@ function displayRecipes(data) {
 
     // <button class="data-url" data-id=${data[i].id}>View Recipie
     //       </button>
-    console.log(htmlCode)
+   
     document.getElementById("card").innerHTML = htmlCode
     
-    getStorage()
-    console.log(getStorage)
-
-
-    function reset() {
+    // function reset() {
         $("#clear-btn").on("click", function () {
-            $(displayRecipes).val("");
+            localStorage.clear()
         })
 
-    };
+    // };
     // have just a clear button with clear local storage command inside instead of reset function
-    reset();
+    // reset();
 
 }
 
