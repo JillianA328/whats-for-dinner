@@ -83,6 +83,7 @@
     }
 
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: 800px) and (min-width:401px) {
     .bio {
@@ -99,6 +100,24 @@
 
 }
 
+=======
+
+@media screen and (max-width: 800px) and (min-width:401px) {
+    .bio {
+        display: none !important;
+    }
+
+    .hero-body {
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: 50%; 
+        padding: .2rem 1rem !important;
+    }
+
+}
+
+>>>>>>> media-queries-homepage
 @media screen and (max-width: 400px) {
     .bio {
         display: none !important;
@@ -112,6 +131,20 @@
         box-shadow: none;
         text-align: center;
     }
+<<<<<<< HEAD
+=======
+    .header {
+        font-size: 12px !important;
+    }
+    .hero-body {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        padding: .2rem 1rem !important;
+    }
+
+>>>>>>> media-queries-homepage
     .header {
         font-size: 12px !important;
     }
