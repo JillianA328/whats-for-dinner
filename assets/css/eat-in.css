@@ -40,10 +40,8 @@ footer.footer {
     right:0;
 }
 
-
 div.navbar-menu, .div.title {
     padding: 10px;
-    
 }
 
 .navbar-item.is-expanded {
@@ -59,6 +57,7 @@ div.navbar-menu, .div.title {
 footer.footer {
     background-image: linear-gradient(45deg, var(--quaternary-color) 0%, orange 52%, var(--quaternary-color) 90%);
     color: var(--secondary-color);
+    
 }
 
 .background-image {
@@ -146,3 +145,21 @@ div.subtitle {
 /* .image {
     position: static;
 } */
+@media only screen and (max-width: 320px) {
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-menu {
+        display: block;
+        position: static;
+        visibility: visible;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
