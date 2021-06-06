@@ -214,8 +214,8 @@ input {
     }
  
     form {
-        margin-left: 250px;
-        margin-top: -100px;
+        margin-left: 310px;
+        margin-top: -340px;
     }
 
     .hide-it {
@@ -225,7 +225,14 @@ input {
     h3, h4{
         display: none;
     }
-   
+    #search-btn, #clear-btn {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    div.content.has-text-centered {
+        margin-top: 200px;
+    }
   }
   
   /* On screens that are 600px or less, set the background color to olive */
