@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var apiKey = "bb0cfd0345318ff737b874e211c6bcbb";
+    var apiKey = "";
     var zipCode; //undefined
     var card;
     var restName = "";
